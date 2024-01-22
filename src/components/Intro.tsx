@@ -4,7 +4,7 @@ import { Form } from "react-router-dom"
 import { UserPlusIcon } from "@heroicons/react/24/solid";
 
 // assets
-const illustration="https://github.com/coding-in-public/react-router-budget-app/blob/lesson-5/src/assets/illustration.jpg?raw=true"
+const illustration = "https://github.com/coding-in-public/react-router-budget-app/blob/lesson-5/src/assets/illustration.jpg?raw=true"
 
 const Intro = () => {
   return (
@@ -23,6 +23,7 @@ const Intro = () => {
             required
             placeholder="What is your name?" aria-label="Your Name" autoComplete="given-name"
           />
+          <input type="hidden" name="_action" value="newUser" />
           <button type="submit" className="btn btn--dark">
             <span>Create Account</span>
             <UserPlusIcon width={20} />
