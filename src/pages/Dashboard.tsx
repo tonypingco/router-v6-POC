@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 
 import { toast } from "react-toastify";
 
-import { fetchData, createBudget } from "../utils/helper";
+import { fetchData, createBudget, wait } from "../utils/helper";
 import Intro from "../components/Intro";
 import AddBudgetForm from "../components/AddBudgetForm";
 
@@ -13,6 +13,7 @@ export const dashboardServicesLoader = () => {
 }
 
 export async function dashboardAction({ request }) {
+  await wait();
   const data = await request.formData();
   const { _action, ...values } = Object.fromEntries(data);
 
